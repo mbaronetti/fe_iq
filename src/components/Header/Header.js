@@ -8,14 +8,14 @@ const Header = props => {
   return (
     <Affix>
       <header>
-        <Row className="d-flex align-items-center">
-          <Col span={1}>
+        <Row>
+          <Col md={1} sm={8}>
             <img alt="logo" src={logo} id="logo" />
           </Col>
-          <Col span={9}>
+          <Col md={9} sm={16}>
             <h1>{title}</h1>
           </Col>
-          <Col span={14}>
+          <Col md={14} sm={24}>
             <SearchBox placeholder="Enter Question..." />
           </Col>
         </Row>
