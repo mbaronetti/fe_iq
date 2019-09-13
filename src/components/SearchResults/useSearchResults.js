@@ -1,4 +1,4 @@
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const useSearchResults = questions => {
@@ -8,8 +8,8 @@ const useSearchResults = questions => {
   const data = questions.filter(item =>
     item.question.toLowerCase().includes(searchTerm)
   );
+  useEffect(() => setResults(data), [searchTerm]);
 
-  useEffect(() => setResults(data) , [searchTerm])
   if (!searchTerm || searchTerm.length === 0) return null;
   return results;
 };

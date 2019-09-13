@@ -13,7 +13,7 @@ export const questions = [
   },
   {
     id: "3",
-    question: "What are React Memo?",
+    question: "What is React Memo?",
     answer: "The new feature of react js",
     tags: ["react", "hooks" , "sample"]
   }
