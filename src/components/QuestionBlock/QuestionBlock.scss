@@ -1,0 +1,19 @@
+@import "../../utilities/variables";
+
+.question--block {
+  border: 1px solid $grey;
+  padding: $padding;
+  margin: 10px auto;
+  cursor: pointer;
+  &,
+  h2 {
+    color: $grey;
+    transition: color .15s ease;
+  }
+  &:hover {
+    &,
+    h2 {
+      color: #fff;
+    }
+  }
+}

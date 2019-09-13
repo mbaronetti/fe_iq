@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Route, Switch, HashRouter } from "react-router-dom";
+import "antd/dist/antd.css";
+import HomePage from "./pages/HomePage";
+import { questions } from "./utilities/questions";
+import { useDispatch } from "react-redux";
+import { setQuestions } from "./redux/actions";
+import "./App.css";
+//import logo from "./logo.svg";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setQuestions(questions));
+  } , []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </HashRouter>
   );
-}
+};
 
 export default App;

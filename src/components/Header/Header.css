@@ -1,0 +1,11 @@
+header {
+  padding: 15px; }
+  header,
+  header h1 {
+    color: #aaa; }
+  header p {
+    margin: 5px 0 0 0; }
+  header #logo {
+    width: 75px; }
+
+/*# sourceMappingURL=Header.css.map */

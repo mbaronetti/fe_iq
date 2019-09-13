@@ -1,0 +1,14 @@
+@import "../../utilities/variables";
+header {
+  padding: 15px;
+  &,
+  h1 {
+    color: $grey;
+  }
+  p {
+    margin: 5px 0 0 0;
+  }
+  #logo {
+    width: 75px;
+  }
+}

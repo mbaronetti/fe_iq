@@ -1,0 +1,14 @@
+.question--block {
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer; }
+  .question--block,
+  .question--block h2 {
+    color: #aaa;
+    transition: color .15s ease; }
+  .question--block:hover,
+  .question--block:hover h2 {
+    color: #fff; }
+
+/*# sourceMappingURL=QuestionBlock.css.map */
