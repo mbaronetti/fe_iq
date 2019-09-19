@@ -8,7 +8,7 @@ const SearchResults = props => {
   const data = useSearchResults(questions);
   const results = data ? data : questions;
   return (
-    <div>
+    <div style={{ overflow: "auto", maxHeight: "80vh" }}>
       {results.map((item, index) => (
         <QuestionBlock
           key={index}

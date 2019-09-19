@@ -3,7 +3,7 @@
 .question--block {
   border: 1px solid $grey;
   padding: $padding;
-  margin: 10px auto;
+  margin: 0 auto 10px auto;
   cursor: pointer;
   &,
   h2 {
@@ -15,5 +15,8 @@
     h2 {
       color: #fff;
     }
+  }
+  &:last-child{
+    margin: 0 auto;
   }
 }

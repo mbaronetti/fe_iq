@@ -16,7 +16,7 @@ const Header = props => {
             <h1>{title}</h1>
           </Col>
           <Col md={14} sm={24}>
-            <SearchBox placeholder="Enter Question..." />
+            <SearchBox placeholder="Type here..." />
           </Col>
         </Row>
       </header>

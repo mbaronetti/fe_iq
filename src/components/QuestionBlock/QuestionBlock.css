@@ -1,7 +1,7 @@
 .question--block {
   border: 1px solid #aaa;
   padding: 10px;
-  margin: 10px auto;
+  margin: 0 auto 10px auto;
   cursor: pointer; }
   .question--block,
   .question--block h2 {
@@ -10,5 +10,7 @@
   .question--block:hover,
   .question--block:hover h2 {
     color: #fff; }
+  .question--block:last-child {
+    margin: 0 auto; }
 
 /*# sourceMappingURL=QuestionBlock.css.map */

@@ -13,7 +13,7 @@ const SearchBox = props => {
         onChange={onSearch}
         style={{ width: "100%", marginBottom: "5px" }}
       />
-      <Switch size="small" onChange={onSwitch} /> by tag
+      <Switch size="small" onChange={onSwitch} /> by Tag
       <p>
         Showing results for:&nbsp;
         <strong className="green">
