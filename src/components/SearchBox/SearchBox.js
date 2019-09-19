@@ -14,7 +14,10 @@ const SearchBox = props => {
         style={{ width: "100%" }}
       />
       <p>
-        Showing results for: <strong className="green">{val}</strong>
+        Showing results for:
+        <strong className="green">
+          <span data-testid="search-value">{val}</span>
+        </strong>
       </p>
     </div>
   );

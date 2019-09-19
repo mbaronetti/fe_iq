@@ -1,7 +1,7 @@
 //REDUCERS
 import * as ct from "../constants";
-
-const rootReducer = (state = {}, action) => {
+const initialState = {}
+const rootReducer = (state = initialState, action) => {
   if (action.type === ct.SET_SEARCH_TERM) {
     return {
       ...state,
