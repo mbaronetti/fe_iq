@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header/Header";
 import SearchResults from "../components/SearchResults/SearchResults";
 import QuestionBlock from "../components/QuestionBlock/QuestionBlock";
+//import Particles from 'react-particles-js';
 import logo from "../media/logo.png";
 import { useSelector } from "react-redux";
 import { Row, Col } from "antd";

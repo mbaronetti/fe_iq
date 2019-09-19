@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { setSearchTerm } from "../../redux/actions";
+import { useDispatch , useSelector} from "react-redux";
+import { setSearchTerm , setTagMode} from "../../redux/actions";
 import { useDebouncedCallback } from "use-debounce";
 
 export const useSearchBox = () => {
   const [val, setVal] = useState("");
   const dispatch = useDispatch();
+  const tagMode = useSelector(state => state.tagMode)
   const [debouncedCallback] = useDebouncedCallback(value => {
     dispatch(setSearchTerm(value));
   }, 250);
@@ -14,5 +15,9 @@ export const useSearchBox = () => {
     setVal(value);
     debouncedCallback(value);
   };
-  return { val, onSearch };
+  const onSwitch = () => {
+    console.log('sample')
+    dispatch(setTagMode(!tagMode))
+  }
+  return { val, onSearch , onSwitch};
 };

@@ -2,3 +2,4 @@
 export const SET_SEARCH_TERM = 'SET_SEARCH_TERM'
 export const SET_QUESTIONS = 'SET_QUESTIONS'
 export const SET_SEARCH_RESULTS = 'SET_QUESTIONS'
+export const SET_TAG_MODE = 'SET_TAG_MODE'

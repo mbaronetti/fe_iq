@@ -20,6 +20,12 @@ const rootReducer = (state = initialState, action) => {
       searchResults: action.data
     };
   }
+  if (action.type === ct.SET_TAG_MODE) {
+    return {
+      ...state,
+      tagMode: action.data
+    };
+  }
   return state;
 };
 

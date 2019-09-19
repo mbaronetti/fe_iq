@@ -1,18 +1,19 @@
 import React from "react";
-import { Input } from "antd";
+import { Input, Switch } from "antd";
 import { useSearchBox } from "./useSearchBox";
 const { Search } = Input;
 
 const SearchBox = props => {
   const { placeholder } = props;
-  const { val, onSearch } = useSearchBox();
+  const { val, onSearch, onSwitch } = useSearchBox();
   return (
     <div>
       <Search
         placeholder={placeholder}
         onChange={onSearch}
-        style={{ width: "100%" }}
+        style={{ width: "100%", marginBottom: "5px" }}
       />
+      <Switch size="small" onChange={onSwitch} /> by tag
       <p>
         Showing results for:&nbsp;
         <strong className="green">
