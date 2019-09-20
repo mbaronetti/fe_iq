@@ -1,21 +1,28 @@
 import React from "react";
-import { Row, Col , Button} from "antd";
+import { Row, Col, Button } from "antd";
+import QuestionBlock from "../QuestionBlock/QuestionBlock";
 
 const QuizBlock = props => {
-  const { question, answer } = props;
+  const { question, answer, key } = props;
+  const buttonStyle = {
+    display: "block",
+    margin: "auto"
+  };
   return (
-    <div className="question--block">
-      <Row>
-        <Col span={24}>
-          <h2>{question}</h2>
-        </Col>
-      </Row>
+    <QuestionBlock key={key} question={question} answer={answer}>
       <Row>
         <Col span={12}>
-          <Button icon="loading" />
+          <Button type="danger" icon="close-circle" style={buttonStyle}>
+            False
+          </Button>
+        </Col>
+        <Col span={12}>
+          <Button type="primary" icon="check-circle" style={buttonStyle}>
+            True
+          </Button>
         </Col>
       </Row>
-    </div>
+    </QuestionBlock>
   );
 };
 

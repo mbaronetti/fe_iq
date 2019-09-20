@@ -1,9 +1,9 @@
 import React from "react";
 import { Row, Col } from "antd";
-import './QuestionBlock.css'
+import "./QuestionBlock.css";
 
 const QuestionBlock = props => {
-  const { question, answer } = props;
+  const { question, answer , children} = props;
   return (
     <div className="question--block">
       <Row>
@@ -16,6 +16,7 @@ const QuestionBlock = props => {
           <p>{answer}</p>
         </Col>
       </Row>
+      {children}
     </div>
   );
 };
