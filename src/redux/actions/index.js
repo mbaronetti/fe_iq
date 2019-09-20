@@ -14,6 +14,13 @@ export const setQuestions = data => {
     data
   };
 };
+
+export const setQuizQuestions = data => {
+  return {
+    type: ct.SET_QUIZ_QUESTIONS,
+    data
+  };
+};
 export const setTagMode = data => {
   return {
     type: ct.SET_TAG_MODE,

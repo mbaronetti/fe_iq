@@ -22,7 +22,7 @@ export const questions = [
   }
 ];
 
-export const quiz = [
+export const quizQuestions = [
   {
     id: "1",
     question: "Virtual DOM",

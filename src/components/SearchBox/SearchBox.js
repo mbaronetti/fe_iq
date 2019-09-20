@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Switch, Button } from "antd";
+import { Input, Switch } from "antd";
 import { useSearchBox } from "./useSearchBox";
 const { Search } = Input;
 

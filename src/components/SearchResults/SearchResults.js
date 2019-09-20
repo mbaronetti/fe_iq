@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import QuestionBlock from "../QuestionBlock/QuestionBlock";
 import useSearchResults from "./useSearchResults";
 

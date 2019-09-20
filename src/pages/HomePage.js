@@ -11,7 +11,10 @@ import { useRandomQuestion } from "../components/Hooks";
 
 const HomePage = () => {
   const questions = useSelector(state => state.questions);
+  const quizQuestions = useSelector(state => state.quizQuestions);
   const randomQuestion = useRandomQuestion(questions);
+  const randomQuizQuestion = useRandomQuestion(quizQuestions);
+
   if (questions)
     return (
       <div id="Homepage">
@@ -21,18 +24,19 @@ const HomePage = () => {
             <Col span={4} offset={6}>
               {randomQuestion && (
                 <QuestionBlock
-                  key={randomQuestion.id}
+                  data-testid={"random-question-block"}
+                  key={randomQuestion.question}
                   question={randomQuestion.question}
                   answer={randomQuestion.answer}
                 />
               )}
-                {randomQuestion && (
-                  <QuizBlock
-                    key={randomQuestion.id}
-                    question={randomQuestion.question}
-                    answer={randomQuestion.answer}
-                  />
-                )}
+              {randomQuizQuestion && (
+                <QuizBlock
+                  key={randomQuizQuestion.question}
+                  question={randomQuizQuestion.question}
+                  answer={randomQuizQuestion.answer}
+                />
+              )}
             </Col>
             <Col span={14}>
               <SearchResults questions={questions} />
