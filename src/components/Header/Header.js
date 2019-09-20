@@ -10,7 +10,7 @@ const Header = props => {
       <header>
         <Row>
           <Col md={1} sm={8}>
-            <img alt="logo" src={logo} id="logo" />
+            <img alt="logo" src={logo} id="logo" data-testid="header-logo"/>
           </Col>
           <Col md={9} sm={16}>
             <h1>{title}</h1>
