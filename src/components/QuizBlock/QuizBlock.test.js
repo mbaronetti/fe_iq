@@ -11,9 +11,14 @@ test("can render with redux with defaults", () => {
     <QuizBlock />
   );
   const elem = getByTestId('false-button')
+  const elem2 = getByTestId('true-button')
   expect(elem).not.toBeDisabled()
   expect(elem).toBeVisible()
   expect(elem).toHaveTextContent('False')
+  fireEvent.click(elem)
+  expect(elem).toBeDisabled()
+  expect(elem2).toBeDisabled()
+
 
 
 });

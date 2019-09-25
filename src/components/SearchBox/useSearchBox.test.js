@@ -18,5 +18,4 @@ test("can render with redux with defaults", () => {
     target: { value: "search query" }
   });
   expect(getByTestId("search-value").textContent).toBe("search query");
-
 });

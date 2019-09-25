@@ -35,6 +35,7 @@ const HomePage = () => {
                   key={randomQuizQuestion.question}
                   question={randomQuizQuestion.question}
                   answer={randomQuizQuestion.answer}
+                  correctAnswer={randomQuizQuestion.correctAnswer}
                 />
               )}
             </Col>
