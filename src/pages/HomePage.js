@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="homepage--container">
           <Row gutter={12}>
             <Col span={4} offset={6}>
-              {randomQuestion && (
+              {false && randomQuestion && (
                 <QuestionBlock
                   data-testid={"random-question-block"}
                   key={randomQuestion.question}
