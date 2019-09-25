@@ -21,5 +21,5 @@ export const useSearchBox = () => {
   const onSwitch = () => {
     dispatch(setTagMode(!tagMode));
   };
-  return { val, onSearch, onSwitch };
+  return { val, onSearch, onSwitch, tagMode };
 };

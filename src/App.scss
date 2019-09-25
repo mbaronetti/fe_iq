@@ -6,7 +6,7 @@ body {
 img {
   max-width: 100%;
 }
-.homepage--container{
+.homepage--container {
   padding: $padding;
 }
 .d-flex {
@@ -21,15 +21,27 @@ img {
 .blue {
   color: blue;
 }
+.btn-success {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $green;
+    border-color: $green;
+  }
+  &:hover {
+    opacity: .9;
+  }
+}
 *::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $grey;
-    outline: 1px solid $grey;
+  background-color: $grey;
+  outline: 1px solid $grey;
 }

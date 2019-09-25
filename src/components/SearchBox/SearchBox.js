@@ -5,7 +5,7 @@ const { Search } = Input;
 
 const SearchBox = props => {
   const { placeholder } = props;
-  const { val, onSearch, onSwitch } = useSearchBox();
+  const { val, onSearch, onSwitch, tagMode } = useSearchBox();
 
   return (
     <div>
@@ -17,7 +17,7 @@ const SearchBox = props => {
       />
       <Switch size="small" onChange={onSwitch} /> by Tag
       <p>
-        Showing results for:&nbsp;
+        Showing {tagMode && 'Tag '}results for:&nbsp;
         <strong className="green">
           <span data-testid="search-value">{val}</span>
         </strong>

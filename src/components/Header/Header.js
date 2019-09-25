@@ -8,7 +8,7 @@ const Header = props => {
   return (
     <Affix>
       <header>
-        <Row>
+        <Row gutter={12}>
           <Col md={1} sm={8}>
             <img alt="logo" src={logo} id="logo" data-testid="header-logo"/>
           </Col>

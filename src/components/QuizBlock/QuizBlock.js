@@ -12,12 +12,23 @@ const QuizBlock = props => {
     <QuestionBlock question={question} answer={answer}>
       <Row>
         <Col span={12}>
-          <Button type="danger" icon="close-circle" style={buttonStyle}>
+          <Button
+            data-testid="false-button"
+            type="danger"
+            icon="close-circle"
+            style={buttonStyle}
+          >
             False
           </Button>
         </Col>
         <Col span={12}>
-          <Button type="primary" icon="check-circle" style={buttonStyle}>
+          <Button
+            data-testid="true-button"
+            className="btn-success"
+            type="primary"
+            icon="check-circle"
+            style={buttonStyle}
+          >
             True
           </Button>
         </Col>
