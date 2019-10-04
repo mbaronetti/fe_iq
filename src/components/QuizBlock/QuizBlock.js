@@ -28,10 +28,7 @@ const QuizBlock = props => {
         icon={<Icon type="smile" theme="twoTone" twoToneColor="#52c41a" />}
         title={correctAnswers + " out of " + quizQuestions.length}
         extra={
-          <Button
-            type="primary"
-            onClick={handleReloadQuiz}
-          >
+          <Button type="primary" onClick={handleReloadQuiz}>
             Try again!
           </Button>
         }

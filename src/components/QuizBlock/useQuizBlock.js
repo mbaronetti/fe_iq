@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { randomItem, checkArrayItemExistance } from "../Hooks";
+import { getRandomItem, checkArrayItemExistance } from "../Hooks";
 
 const useQuizBlock = () => {
   const quizQuestions = useSelector(state => state.quizQuestions);
@@ -9,22 +9,23 @@ const useQuizBlock = () => {
   const [showResult, setShowResult] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const [correctAnswers, setCorrectAnswers] = useState(0)
+  const [correctAnswers, setCorrectAnswers] = useState(0);
 
   const handleReloadQuiz = () => {
-    setCorrectAnswers(0)
+    setCorrectAnswers(0);
     setAnsweredQuestions([]);
     setQuizCompleted(false);
-    setQuizQuestion(randomItem(quizQuestions));
+    setQuizQuestion(getRandomItem(quizQuestions));
   };
 
   const handleClick = e => {
+    const { correctAnswer } = quizQuestion;
     const val = JSON.parse(e.target.value);
-    const correct = val === quizQuestion && quizQuestion.correctAnswer
+    const correct = val === correctAnswer;
     setIsCorrect(correct);
     setShowResult(true);
     handleAnsweredQuestions();
-    if(correct) setCorrectAnswers(correctAnswers + 1)
+    if (correct) setCorrectAnswers(correctAnswers + 1);
   };
 
   const handleAnsweredQuestions = () => {
@@ -40,16 +41,16 @@ const useQuizBlock = () => {
       return setQuizCompleted(true);
     const answered = checkArrayItemExistance(question, answeredQuestions);
     if (!answered) setQuizQuestion(question);
-    else return handleNewQuestion(randomItem(quizQuestions));
+    else return handleNewQuestion(getRandomItem(quizQuestions));
   };
 
   const handleResultClick = () => {
     setShowResult(false);
-    handleNewQuestion(randomItem(quizQuestions));
+    handleNewQuestion(getRandomItem(quizQuestions));
   };
 
   useEffect(() => {
-    setQuizQuestion(randomItem(quizQuestions));
+    setQuizQuestion(getRandomItem(quizQuestions));
   }, []);
 
   return {
