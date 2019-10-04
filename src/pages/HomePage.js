@@ -7,13 +7,9 @@ import QuizBlock from "../components/QuizBlock/QuizBlock";
 import logo from "../media/logo.png";
 import { useSelector } from "react-redux";
 import { Row, Col } from "antd";
-import { useRandomQuestion } from "../components/Hooks";
 
 const HomePage = () => {
   const questions = useSelector(state => state.questions);
-  const quizQuestions = useSelector(state => state.quizQuestions);
-  const randomQuestion = useRandomQuestion(questions);
-  const randomQuizQuestion = useRandomQuestion(quizQuestions);
 
   if (questions)
     return (
@@ -22,22 +18,7 @@ const HomePage = () => {
         <div className="homepage--container">
           <Row gutter={12}>
             <Col span={4} offset={6}>
-              {false && randomQuestion && (
-                <QuestionBlock
-                  data-testid={"random-question-block"}
-                  key={randomQuestion.question}
-                  question={randomQuestion.question}
-                  answer={randomQuestion.answer}
-                />
-              )}
-              {randomQuizQuestion && (
-                <QuizBlock
-                  key={randomQuizQuestion.question}
-                  question={randomQuizQuestion.question}
-                  answer={randomQuizQuestion.answer}
-                  correctAnswer={randomQuizQuestion.correctAnswer}
-                />
-              )}
+              <QuizBlock />
             </Col>
             <Col span={14}>
               <SearchResults questions={questions} />

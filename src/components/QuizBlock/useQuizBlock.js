@@ -1,18 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { randomItem } from "../Hooks";
 
-const useQuizBlock = correctAnswer => {
-  const [disabled, setDisabled] = useState(false);
+const useQuizBlock = () => {
+  const quizQuestions = useSelector(state => state.quizQuestions);
   const [isCorrect, setIsCorrect] = useState(null);
-  const handleClick = val => {
-    console.log(val);
-    console.log(correctAnswer);
+  const [quizQuestion, setQuizQuestion] = useState(null);
+  const [showResult, setShowResult] = useState(false);
+
+  const handleClick = e => {
+    const { correctAnswer } = quizQuestion;
+    const val = JSON.parse(e.target.value);
     setIsCorrect(val === correctAnswer);
-    setDisabled(true)
+    setShowResult(true);
   };
+
+  const handleResultClick = () => {
+    setShowResult(false);
+    setQuizQuestion(randomItem(quizQuestions));
+  };
+
+  useEffect(() => {
+    if (quizQuestions) {
+      setQuizQuestion(randomItem(quizQuestions));
+    }
+  }, []);
+
   return {
     handleClick,
-    disabled,
-    isCorrect
+    isCorrect,
+    showResult,
+    question: quizQuestion ? quizQuestion.question : null,
+    answer: quizQuestion ? quizQuestion.answer : null,
+    correctAnswer: quizQuestion ? quizQuestion.correctAnswer : null,
+    explanation: quizQuestion ? quizQuestion.explanation : null,
+    handleResultClick
   };
 };
 

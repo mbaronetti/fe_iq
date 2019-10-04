@@ -30,7 +30,17 @@ img {
     border-color: $green;
   }
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
+  }
+}
+.ant-result {
+  border: 1px solid $grey;
+  .ant-result-title {
+    color: $grey;
+    line-height: initial;
+  }
+  .ant-result-icon > .anticon {
+    font-size: 48px;
   }
 }
 *::-webkit-scrollbar {

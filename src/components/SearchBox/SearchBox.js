@@ -15,9 +15,10 @@ const SearchBox = props => {
         onChange={onSearch}
         style={{ width: "100%", marginBottom: "5px" }}
       />
-      <Switch size="small" onChange={onSwitch} /> by Tag
+      <Switch id="switch-input" size="small" onChange={onSwitch} /> by
+      Tag
       <p>
-        Showing {tagMode && 'Tag '}results for:&nbsp;
+        Showing {tagMode && "Tag "}results for:&nbsp;
         <strong className="green">
           <span data-testid="search-value">{val}</span>
         </strong>

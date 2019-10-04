@@ -1,15 +1,37 @@
 import React from "react";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Icon, Result } from "antd";
 import QuestionBlock from "../QuestionBlock/QuestionBlock";
 import useQuizBlock from "./useQuizBlock";
 
 const QuizBlock = props => {
-  const { question, answer, correctAnswer } = props;
   const buttonStyle = {
     display: "block",
     margin: "auto"
   };
-  const { handleClick, disabled, isCorrect } = useQuizBlock(correctAnswer);
+  const {
+    handleClick,
+    isCorrect,
+    showResult,
+    question,
+    answer,
+    correctAnswer,
+    explanation,
+    handleResultClick
+  } = useQuizBlock();
+  if (showResult)
+    return (
+      <Result
+        icon={
+          isCorrect ? (
+            <Icon type="check-circle" theme="twoTone" twoToneColor="#52c41a" />
+          ) : (
+            <Icon type="close-circle" theme="twoTone" twoToneColor="tomato" />
+          )
+        }
+        title={explanation}
+        extra={<Button type="primary" onClick={handleResultClick}>Next Question</Button>}
+      />
+    );
   return (
     <QuestionBlock question={question} answer={answer}>
       <Row>
@@ -20,7 +42,7 @@ const QuizBlock = props => {
             icon="close-circle"
             style={buttonStyle}
             onClick={handleClick}
-            disabled={disabled}
+            value={false}
           >
             False
           </Button>
@@ -32,14 +54,13 @@ const QuizBlock = props => {
             type="primary"
             icon="check-circle"
             style={buttonStyle}
-            onClick={() => handleClick(true)}
-            disabled={disabled}
+            onClick={handleClick}
+            value={true}
           >
             True
           </Button>
         </Col>
       </Row>
-      {disabled ? (isCorrect ? "Correct" : "false") : null}
     </QuestionBlock>
   );
 };
