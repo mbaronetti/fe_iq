@@ -19,9 +19,8 @@ const useQuizBlock = () => {
   };
 
   const handleClick = e => {
-    const { correctAnswer } = quizQuestion;
     const val = JSON.parse(e.target.value);
-    const correct = val === correctAnswer
+    const correct = val === quizQuestion && quizQuestion.correctAnswer
     setIsCorrect(correct);
     setShowResult(true);
     handleAnsweredQuestions();

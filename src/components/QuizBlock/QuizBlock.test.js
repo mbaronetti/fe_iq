@@ -1,12 +1,12 @@
 import React from "react";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, fireEvent, cleanup , waitForElement } from "@testing-library/react";
 import QuizBlock from "./QuizBlock";
 import {renderWithRedux} from '../../App.test.js'
 import '@testing-library/jest-dom/extend-expect'
 
 afterEach(cleanup);
 
-test("can render with redux with defaults", () => {
+test("can render with redux with defaults", async () => {
   const { getByTestId, getByText, unmount, container } = renderWithRedux(
     <QuizBlock />
   );
@@ -16,9 +16,8 @@ test("can render with redux with defaults", () => {
   expect(elem).toBeVisible()
   expect(elem).toHaveTextContent('False')
   fireEvent.click(elem)
-  expect(elem).toBeDisabled()
-  expect(elem2).toBeDisabled()
-
-
+  expect(elem).not.toBeInTheDocument()
+  expect(elem2).not.toBeInTheDocument()
+  //const elem3 = await waitForElement(() => getByTestId("reload-button"));
 
 });
