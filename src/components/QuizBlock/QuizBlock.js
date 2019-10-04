@@ -9,15 +9,31 @@ const QuizBlock = props => {
     margin: "auto"
   };
   const {
+    quizCompleted,
     handleClick,
     isCorrect,
     showResult,
     question,
     answer,
-    correctAnswer,
     explanation,
-    handleResultClick
+    handleResultClick,
+    handleReloadQuiz,
+    correctAnswers,
+    quizQuestions
   } = useQuizBlock();
+
+  if (quizCompleted)
+    return (
+      <Result
+        icon={<Icon type="smile" theme="twoTone" twoToneColor="#52c41a" />}
+        title={correctAnswers + " out of " + quizQuestions.length}
+        extra={
+          <Button type="primary" onClick={handleReloadQuiz}>
+            Reload
+          </Button>
+        }
+      />
+    );
   if (showResult)
     return (
       <Result
@@ -29,7 +45,11 @@ const QuizBlock = props => {
           )
         }
         title={explanation}
-        extra={<Button type="primary" onClick={handleResultClick}>Next Question</Button>}
+        extra={
+          <Button type="primary" onClick={handleResultClick}>
+            Next Question
+          </Button>
+        }
       />
     );
   return (

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import SearchResults from "../components/SearchResults/SearchResults";
-import QuestionBlock from "../components/QuestionBlock/QuestionBlock";
 import QuizBlock from "../components/QuizBlock/QuizBlock";
 //import Particles from 'react-particles-js';
 import logo from "../media/logo.png";
