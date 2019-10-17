@@ -29,6 +29,12 @@ img {
 .btn-success:hover {
   opacity: 0.9; }
 
+.tag--link {
+  cursor: pointer;
+  transition: all .15s ease; }
+  .tag--link:hover {
+    color: orange; }
+
 .ref--link {
   display: block;
   text-align: right;
