@@ -30,8 +30,7 @@ img {
   opacity: 0.9; }
 
 .tag--link {
-  cursor: pointer;
-  transition: all .15s ease; }
+  cursor: pointer; }
   .tag--link:hover {
     color: orange; }
 

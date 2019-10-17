@@ -14,6 +14,7 @@ const SearchBox = props => {
         placeholder={placeholder}
         onChange={onSearch}
         style={{ width: "100%", marginBottom: "5px" }}
+        value={val}
       />
       <Switch id="switch-input" size="small" onChange={onSwitch} /> by Tag
       <p>
