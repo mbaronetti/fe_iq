@@ -3,10 +3,9 @@ import { useSelector } from "react-redux";
 const useSearchResults = questions => {
   const tagMode = useSelector(state => state.tagMode);
   let searchTerm = useSelector(state => state.searchTerm);
-  searchTerm = searchTerm && searchTerm.toLowerCase();
 
   const tagsMatch = questions.map(question =>
-    question.tags.filter(tag => tag.includes(searchTerm))
+    question.tags.filter(tag => tag.toLowerCase().includes(searchTerm))
   );
 
   const data = !tagMode

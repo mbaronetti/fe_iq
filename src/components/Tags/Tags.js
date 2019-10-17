@@ -11,7 +11,7 @@ const Tags = props => {
     if(!tagMode) document.getElementById('switch-input').click()
   }
   const renderTags = tags.map((tag, index) => (
-    <span key={index} onClick={() => handleClick(tag)} className={tagMode && tag === searchTerm ? "orange" : "tag--link"}>
+    <span key={index} onClick={() => handleClick(tag)} className={tagMode && tag.toLowerCase() === searchTerm ? "orange" : "tag--link"}>
       {tag}&nbsp;
     </span>
   ));

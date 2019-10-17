@@ -44,10 +44,10 @@ img {
 .ref--link{
   display: block;
   text-align: right;
-  opacity: .5;
+  opacity: .85;
   &:hover{opacity: 1}
 }
-
+.text-center{text-align: center;}
 .ant-result {
   border: 1px solid $grey;
   .ant-result-title {
