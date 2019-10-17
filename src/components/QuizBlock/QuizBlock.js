@@ -26,7 +26,12 @@ const QuizBlock = props => {
     return (
       <Result
         icon={<Icon type="smile" theme="twoTone" twoToneColor="#52c41a" />}
-        title={correctAnswers + " out of " + quizQuestions.length}
+        title={
+          "Quiz completed, you answered " +
+          correctAnswers +
+          " correct answers out of " +
+          quizQuestions.length
+        }
         extra={
           <Button type="primary" onClick={handleReloadQuiz}>
             Try again!

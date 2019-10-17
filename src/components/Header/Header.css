@@ -2,10 +2,17 @@ header {
   padding: 15px; }
   header,
   header h1 {
-    color: #aaa; }
+    color: #e0e0e0;
+    margin: 0; }
+  header h2 {
+    color: #aaa;
+    font-weight: normal;
+    font-size: 1em;
+    display: inline-block; }
   header p {
     margin: 5px 0 0 0; }
   header #logo {
-    width: 75px; }
+    width: 75px;
+    margin-top: 10px; }
 
 /*# sourceMappingURL=Header.css.map */

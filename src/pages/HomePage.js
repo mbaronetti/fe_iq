@@ -13,7 +13,7 @@ const HomePage = () => {
   if (questions)
     return (
       <div id="Homepage">
-        <Header logo={logo} title="Front end Glossary" />
+        <Header logo={logo} title="Front end Glossary" subTitle={"+" + questions.length + " Interview Questions in a snap!"}/>
         <div className="homepage--container">
           <Row gutter={12}>
             <Col span={4} offset={6}>

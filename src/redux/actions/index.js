@@ -4,7 +4,7 @@ import * as ct from "../constants";
 export const setSearchTerm = data => {
   return {
     type: ct.SET_SEARCH_TERM,
-    data
+    data: data.toLowerCase()
   };
 };
 
