@@ -7,6 +7,7 @@ export const useSearchBox = () => {
   const [val, setVal] = useState("");
   const dispatch = useDispatch();
   const tagMode = useSelector(state => state.tagMode);
+  const searchTerm = useSelector(state => state.searchTerm);
 
   const [debouncedCallback] = useDebouncedCallback(value => {
     dispatch(setSearchTerm(value));
@@ -21,5 +22,5 @@ export const useSearchBox = () => {
   const onSwitch = () => {
     dispatch(setTagMode(!tagMode));
   };
-  return { val, onSearch, onSwitch, tagMode };
+  return { val, onSearch, onSwitch, tagMode , searchTerm};
 };
