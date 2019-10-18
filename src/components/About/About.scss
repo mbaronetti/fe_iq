@@ -4,4 +4,6 @@
   width: 50%;
   margin: auto;
   display: block;
+  transition: all .25s ease;
+  &:hover{opacity: .5}
 }

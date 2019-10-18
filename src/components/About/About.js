@@ -3,9 +3,14 @@ import { Row, Col, Icon } from "antd";
 import profile from "../../media/mm.jpg";
 import "./About.css";
 
+const style = {
+  border: 'none',
+  background: '#101427'
+}
+
 const About = props => {
   return (
-    <div className="question--block">
+    <div className="question--block" style={style}>
       <Row>
         <Col span={24}>
           <img className="img--profile" src={profile} alt="profile" />

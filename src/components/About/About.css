@@ -3,6 +3,9 @@
   border-radius: 50%;
   width: 50%;
   margin: auto;
-  display: block; }
+  display: block;
+  transition: all .25s ease; }
+  .img--profile:hover {
+    opacity: .5; }
 
 /*# sourceMappingURL=About.css.map */

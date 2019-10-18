@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm, setTagMode } from "../../redux/actions";
 import { useDebouncedCallback } from "use-debounce";
@@ -22,5 +22,6 @@ export const useSearchBox = () => {
   const onSwitch = () => {
     dispatch(setTagMode(!tagMode));
   };
+  useEffect(() => setVal(searchTerm), [searchTerm]) //Remember this bro
   return { val, onSearch, onSwitch, tagMode , searchTerm};
 };
