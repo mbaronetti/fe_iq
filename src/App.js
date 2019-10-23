@@ -11,8 +11,16 @@ import "./App.css";
 
 const App = () => {
   const dispatch = useDispatch();
+  const getQuestions = async () => {
+    const response = await fetch("https://api.myjson.com/bins/1al9f8")
+    const data = await response.json()
+    console.log('data', data)
+    dispatch(setQuestions(data.data));
+    return data
+  }
   useEffect(() => {
-    dispatch(setQuestions(questions));
+    //dispatch(setQuestions(questions));
+    getQuestions()
     dispatch(setQuizQuestions(quizQuestions));
   }, []);
   return (
