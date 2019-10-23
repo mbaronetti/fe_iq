@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/mbaronetti/fe_iq/master/scr.png "Preview")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
