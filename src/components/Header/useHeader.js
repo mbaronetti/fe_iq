@@ -3,10 +3,10 @@ const useHeader = () => {
   const [activeIcon, setActiveIcon] = useState(false);
   useEffect(() => {
     if (activeIcon) {
-      setTimeout(() => setActiveIcon(!activeIcon), 500);
+      setTimeout(() => setActiveIcon(!activeIcon), 200);
       return;
     }
-    setTimeout(() => setActiveIcon(!activeIcon), 1500);
+    setTimeout(() => setActiveIcon(!activeIcon), 2500);
   }, [activeIcon]);
 
   return { activeIcon };
