@@ -16,7 +16,7 @@ const About = props => {
       <Row>
         <Col span={24}>
           <img className="img--profile" src={profile} alt="profile" />
-          <p>
+          <p style={{marginTop: '10px'}}>
             I'm a ​Front-end​ ​developer​ ​with​ a strong knowledge building SPA
             React & Redux based applications,​ ​with​ ​great​ ​passion​ ​for​
             ​challenges,​ new ​cultures​ ​and​ ​environments.

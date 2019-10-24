@@ -1,0 +1,15 @@
+#footer {
+  text-align: right;
+  padding-right: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  img{
+    margin: 15px auto;
+    width: 1vw;
+    animation: imageMotion 5s linear infinite alternate;
+  }
+}
+@keyframes imageMotion{
+  to{opacity: .1}
+}

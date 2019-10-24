@@ -3,6 +3,7 @@ import Header from "../components/Header/Header";
 import SearchResults from "../components/SearchResults/SearchResults";
 import QuizBlock from "../components/QuizBlock/QuizBlock";
 import About from "../components/About/About";
+import Footer from "../components/Footer/Footer";
 //import Particles from 'react-particles-js';
 import logo from "../media/logo.png";
 import { useSelector } from "react-redux";
@@ -32,6 +33,7 @@ const HomePage = () => {
             </Col>
           </Row>
         </div>
+        <Footer />
       </div>
     );
   return null;
