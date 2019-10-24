@@ -1,7 +1,8 @@
 .question--block {
   border: 1px solid #aaa;
   padding: 10px;
-  margin: 0 auto 10px auto; }
+  margin: 0 auto 10px auto;
+  overflow: hidden; }
   .question--block,
   .question--block h2 {
     color: #aaa;

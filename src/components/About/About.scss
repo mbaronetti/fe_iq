@@ -4,7 +4,11 @@
   width: 50%;
   margin: auto;
   display: block;
-  transition: all .25s ease;
-  &:hover{opacity: .5}
+  transition: all 0.25s ease;
+  &:hover {
+    opacity: 0.5;
+  }
 }
-a{color: #95a5a6}
+a {
+  color: #95a5a6;
+}

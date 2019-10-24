@@ -16,22 +16,22 @@ const About = props => {
       <Row>
         <Col span={24}>
           <img className="img--profile" src={profile} alt="profile" />
-          <p style={{marginTop: '10px'}}>
-            I'm a ​Front-end​ ​developer​ ​with​ a strong knowledge building SPA
-            React & Redux based applications,​ ​with​ ​great​ ​passion​ ​for​
-            ​challenges,​ new ​cultures​ ​and​ ​environments.
+          <p style={{ marginTop: "10px" }}>
+            I'm a ​Front-end​ ​developer​ ​with​ a strong passion for SPA React
+            & Redux based applications,​ always looking​ ​for​ new ​challenges,​
+            ​cultures​ ​and​ ​environments.
             <br />
-            Tech Stack
+            <br />
+            <span style={{opacity:'.5'}}>Tech Stack</span>
             <br />
             ECMA 6, JSX, Javascript, HTML5 & CSS3
             <br />
             ReactJs, Redux (thunk), jQuery, KendoUI, AngularJs, Restful APIs,
-            Node, Webpack Sass, Less, BEM convention.
+            Node, Webpack
             <br />
+            <span style={{opacity:'.5'}}>UI & UX</span>
             <br />
-            UI & UX
-            <br />
-            Bootstrap, Foundation, Ant design, Material UI, Semantic UI
+            Sass, Less, BEM, Bootstrap, Foundation, Ant design, Material UI, Semantic UI
             <br />
             Responsive, mobile first and adaptive web design.
             <br />
@@ -42,7 +42,10 @@ const About = props => {
       </Row>
       <Row>
         <Col span={8} className="text-center">
-          <a href="https://www.linkedin.com/in/manuelbaronetti/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/manuelbaronetti/"
+            target="_blank"
+          >
             <Icon style={iconStyle} type="linkedin" />
           </a>
         </Col>
